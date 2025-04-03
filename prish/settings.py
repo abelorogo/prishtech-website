@@ -45,8 +45,10 @@ ROOT_URLCONF = 'prish.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
+        'DIRS': [
+            BASE_DIR / 'templates',  # If you have a global templates folder
+        ],
+        'APP_DIRS': True,  # Make sure this is set to True to look in app's templates
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -57,6 +59,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'prish.wsgi.application'
 

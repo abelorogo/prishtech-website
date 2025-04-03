@@ -58,7 +58,7 @@ def contact(request):
     return render(request, 'contact.html', {'form': form, 'email_sent': email_sent})
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 def services(request):
     return render(request, 'services.html')
