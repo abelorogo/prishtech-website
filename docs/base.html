@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prish Technologies</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Prish Technologies" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>{% block content %}{% endblock %}</main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>COMPANY</h3>
+          <ul>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'services' %}">Our services</a></li>
+            <li><a href="{% url 'contact' %}">Contacts</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>CONTACT</h3>
+          <p>prishtechnologies@gmail.com</p>
+          <p>+254 717 945895</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="{% static 'images/facebook.png' %}" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="{% static 'images/twitter.png' %}" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn"
+            /></a>
+            <a href="#"
+              ><img src="{% static 'images/instagram.png' %}" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>ADDRESS</h3>
+          <p>101 The Amazing Road</p>
+          <p>Premier Building</p>
+          <p>Manchester 40105</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Prish Technologies. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle (Optional) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelector(".nav-links");
+        const toggleButton = document.createElement("div");
+        toggleButton.innerHTML = "&#9776;";
+        toggleButton.classList.add("menu-toggle");
+        document.querySelector(".navbar").prepend(toggleButton);
+
+        toggleButton.addEventListener("click", function () {
+          navLinks.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>
