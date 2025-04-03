@@ -1,0 +1,148 @@
+
+/* Contact Page Styling */
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.messages {
+    margin-bottom: 15px;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-left: 5px solid #28a745;
+    border-radius: 5px;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-left: 5px solid #dc3545;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button img {
+    width: 18px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Contact Info Section */
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    color: #007bff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-form {
+        width: 90%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/services1.css' %}" />
+<!-- Services Page -->
+<section class="services">
+  <h1>Our Services</h1>
+  <p class="services-intro">
+    At Prish Technologies, we offer cutting-edge IT and security solutions
+    tailored to your needs.
+  </p>
+
+  <div class="service-list">
+    <div class="service-item">
+      <img src="{% static 'images/networking.jpg' %}" alt="Networking" />
+      <h3>Networking Design & Optimization</h3>
+      <p>
+        Comprehensive network planning, design, and performance optimization for
+        businesses.
+      </p>
+    </div>
+    <div class="service-item">
+      <img src="{% static 'images/cabling.jpg' %}" alt="Cabling" />
+      <h3>Structured Cabling Services</h3>
+      <p>
+        Reliable cabling solutions ensuring seamless communication
+        infrastructure.
+      </p>
+    </div>
+    <div class="service-item">
+      <img src="{% static 'images/cctv.jpg' %}" alt="CCTV" />
+      <h3>CCTV Installation</h3>
+      <p>Advanced surveillance systems for enhanced security and monitoring.</p>
+    </div>
+    <div class="service-item">
+      <img src="{% static 'images/fiber.jpg' %}" alt="Fiber Optic" />
+      <h3>Fiber Optic Laying & Optimization</h3>
+      <p>High-speed fiber optic deployment for superior connectivity.</p>
+    </div>
+    <div class="service-item">
+      <img src="{% static 'images/wireless.jpg' %}" alt="Wireless" />
+      <h3>Wireless Solutions</h3>
+      <p>
+        Scalable and secure wireless network solutions for businesses and homes.
+      </p>
+    </div>
+    <div class="service-item">
+      <img src="{% static 'images/datacenter.jpg' %}" alt="Data Center" />
+      <h3>Data Center Solutions</h3>
+      <p>Secure and efficient data storage and management services.</p>
+    </div>
+    <div class="service-item">
+      <img src="{% static 'images/voip.jpg' %}" alt="VoIP" />
+      <h3>VoIP / PABX Services</h3>
+      <p>Cost-effective voice communication systems for businesses.</p>
+    </div>
+    <div class="service-item">
+      <img src="{% static 'images/security.jpg' %}" alt="Security" />
+      <h3>Security Solutions</h3>
+      <p>
+        Comprehensive security services including access control and intrusion
+        detection.
+      </p>
+    </div>
+    <div class="service-item">
+      <img
+        src="{% static 'images/intelligent.jpg' %}"
+        alt="Intelligent Solutions"
+      />
+      <h3>Intelligent Solutions</h3>
+      <p>
+        AI-powered automation and analytics to streamline business operations.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/project1.css' %}" />
+
+<section class="projects">
+  <h1>Our Successful Projects</h1>
+  <p>
+    We take pride in delivering quality solutions that exceed expectations.
+    Below are some of our most recent projects.
+  </p>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="{% static 'images/project1.jpg' %}" alt="Project 1" />
+      <h3>E-Commerce Platform</h3>
+      <p>
+        A feature-rich online store with seamless checkout and secure payment
+        integration.
+      </p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+
+    <div class="project-card">
+      <img src="{% static 'images/project2.jpg' %}" alt="Project 2" />
+      <h3>Corporate Website</h3>
+      <p>
+        A sleek and professional website for a global consulting firm, enhancing
+        online presence.
+      </p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+
+    <div class="project-card">
+      <img src="{% static 'images/project3.jpg' %}" alt="Project 3" />
+      <h3>Mobile App Development</h3>
+      <p>
+        A modern, cross-platform mobile app that revolutionizes task management
+        for businesses.
+      </p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

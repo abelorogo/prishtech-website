@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Save Email Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      form {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      button {
+        background-color: #5cb85c;
+        color: white;
+        padding: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Save Email Data</h2>
+    <form method="post" action="{% url 'save_email' %}">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

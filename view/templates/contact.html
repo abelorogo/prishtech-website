@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/contacts.css' %}" />
+
+<div
+  class="contact-container"
+  style="background-image: url('{% static 'images/contact-bg.jpg' %}')"
+>
+  <div class="contact-form">
+    <h2>Get Started Today</h2>
+    <p>Everything you need to create your awesome experience.</p>
+
+    {% if email_sent %}
+    <div class="success-message">Your message has been sent successfully!</div>
+    {% endif %} {% if messages %}
+    <div class="messages">
+      {% for message in messages %}
+      <div class="{{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <form method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">
+        Submit
+        <img
+          src="{% static 'images/send-icon.png' %}"
+          alt="Send"
+          width="20px"
+        />
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Contact Info Section -->
+<section class="contact-info">
+  <h3>Contact Us</h3>
+  <p><strong>📍 Location:</strong> Nairobi, Kenya</p>
+  <p><strong>📧 Email:</strong> prishtechnologies@gmail.com</p>
+  <p><strong>📞 Phone:</strong> +254 717 945895</p>
+
+  <!-- Social Media Links -->
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</section>
+
+{% endblock %}
