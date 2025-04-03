@@ -1,5 +1,3 @@
-
-
 from pathlib import Path
 import os
 from dotenv import load_dotenv  # Import the load_dotenv function
@@ -27,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'view',
+    'view',  # Your app for views
 ]
 
 MIDDLEWARE = [
@@ -46,7 +44,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'templates',  # If you have a global templates folder
+            BASE_DIR,  # This will look in the root directory of your project for templates
         ],
         'APP_DIRS': True,  # Make sure this is set to True to look in app's templates
         'OPTIONS': {
@@ -59,7 +57,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 WSGI_APPLICATION = 'prish.wsgi.application'
 
